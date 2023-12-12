@@ -32,3 +32,7 @@ https://github.com/QData/TextAttack/blob/57bc36cc622e8c1a993d728066cb9f42cdec217
 
 Implementation for one-hot encoding multiplication by embedding matrix in jax:
 https://github.com/ur-whitelab/wazy/blob/529eac8b473b9f17d6ff7824230b8fcf35fb99c3/wazy/utils.py#L89
+
+
+Another one in pytorch (actually really good one)
+https://github.com/llm-attacks/llm-attacks/blob/main/llm_attacks/minimal_gcg/opt_utils.py#L11
