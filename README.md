@@ -23,3 +23,12 @@ loss.backward()
 print(logits.grad)
 
 ```
+
+## Reference Implementations
+
+Wrapper for PyTroch modules to output gradients of input tokens:
+
+https://github.com/QData/TextAttack/blob/57bc36cc622e8c1a993d728066cb9f42cdec217d/textattack/models/wrappers/pytorch_model_wrapper.py#L50
+
+Implementation for one-hot encoding multiplication by embedding matrix in jax:
+https://github.com/ur-whitelab/wazy/blob/529eac8b473b9f17d6ff7824230b8fcf35fb99c3/wazy/utils.py#L89
