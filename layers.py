@@ -34,22 +34,3 @@ class DifferentiableEmbedding(nn.Module):
         soft_indices = F.gumbel_softmax(logits, tau=self.tau, hard=False, dim=-1)
         hard_indices = soft_indices.argmax(dim=-1)
         return DifferentiableEmbeddingFunction.apply(self.embedding.weight, hard_indices, soft_indices)
-
-# Example Usage
-num_embeddings = 10
-embedding_dim = 5
-
-# Create a DifferentiableEmbedding instance
-diff_embedding = DifferentiableEmbedding(num_embeddings, embedding_dim)
-
-# Example input - using Gumbel Softmax to get indices
-logits = torch.randn(3, num_embeddings, requires_grad=True)
-
-# Forward pass
-output = diff_embedding(logits)
-
-# Compute gradients
-loss = output.sum()
-loss.backward()
-
-print(logits.grad)
